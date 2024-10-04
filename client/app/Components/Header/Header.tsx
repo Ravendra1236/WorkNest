@@ -2,6 +2,7 @@
 import { useTasks } from "@/context/taskContext";
 import { useUserContext } from "@/context/userContext";
 import { github, moon, profile } from "@/utils/Icons";
+import { span } from "framer-motion/client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -24,7 +25,7 @@ function Header() {
           <span role="img" aria-label="wave">
             👋
           </span>
-          {userId ? `Welcome, ${name}!` : "Welcome to WorkNest"}
+          {userId ? `Welcome, ${name}!` : <span>Welcome to <span className="text-[#2fcaca]">WorkNest</span></span>}
         </h1>
         <p className="text-sm">
           {userId ? (
